@@ -1,0 +1,21 @@
+1:  echo "Sample data for link testing" > sample_data.txt
+   -This command creates a file named sample_data.txt and writes sample text into it.
+2:  ln sample_data.txt sample_hard.txt
+   -This command creates a hard link pointing to the same inode as the original file.
+3:  ln -s sample_data.txt sample_soft.txt
+   -This command creates a symbolic link that references the original file path.
+4:  ls -i sample_data.txt sample_hard.txt sample_soft.txt
+   -This command displays inode numbers for each file.
+5: sample_data.txt and sample_hard.txt share the same inode because a hard link points to the same file data, while the symbolic link has a different inode.
+6:  stat sample_data.txt
+   -This command displays detailed metadata including permissions, timestamps, and file size.
+7:  du ~ --human-readable
+   -Displays disk usage in human readable format
+8:  ls -lh ~
+   -This command lists file sizes of the home directory in a readable format such as KB or MB.
+9:  rm sample_soft.txt
+    ls sample_data.txt
+   -This confirms that deleting a symbolic link does not affect the original file.
+10: du -h --max-depth=1 ~
+    df -h
+   -du shows directory-wise disk usage, while df displays filesystem-level disk space usage.

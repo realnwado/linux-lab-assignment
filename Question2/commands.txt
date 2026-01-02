@@ -1,0 +1,23 @@
+1:  mkdir linux-lab-assignment/Question2/documents
+   -This command creates a directory named documents inside Question2 directory.
+2:  cd linux-lab-assignment/Question2/documents
+    touch plan.txt
+   -These commands navigate into the documents directory and create an empty file named plan.txt.
+3:  echo "Reminder to complete Linux project tasks" > plan.txt
+   -This command writes the text "Reminder to complete Linux project tasks" into the plan.txt file.
+4:  ls -l plan.txt
+   -This command displays file permissions, ownership, and size, confirming that my username owns the file.
+5:  cp plan.txt plan_copy.txt
+   -This command creates a duplicate copy of plan.txt and names it as plan_copy.txt.
+6:  cd ..
+    mv documents project_documents
+   -These commands change directory to documents' parent directory and rename documents to project_documents.
+7:  cd project_documents
+    mkdir archive
+   -These commands navigate to project_documents and create a sub-directory named archive.
+8:  mv plan_copy.txt archive
+   -This command moves the plan_copy.txt file into the archive directory.
+9:  ls -R
+   -This command recursively lists all files and subdirectories to show the entire structure.
+10: realpath archive/plan_copy.txt
+   -This command displays the absolute path of the file after it was moved.

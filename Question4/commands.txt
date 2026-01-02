@@ -1,0 +1,17 @@
+1: awk '{print $1}' /proc/uptime
+  -This command displays uptime in seconds.
+2:  ps -- u $USER
+  -This command lists all processes currently running under my user account.
+3: cat /proc/stat
+  -I identified the process using the highest CPU by observing the %CPU column.
+4: sleep 300 &
+   jobs
+  -This command runs a process in the background and verifies that it is active.
+7: df -h ~
+  -This shows disk usage of the filesystem containing my home directory.
+8: echo $SHELL
+  -This command displays the name of the currently active shell.
+9: uname -a > system_report.txt
+  -This command redirects system information output into a file.
+10: ncdu ~
+   -ncdu provides an interactive view of disk usage, helping identify large files and directories.
